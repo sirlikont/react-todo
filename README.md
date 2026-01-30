@@ -1,16 +1,53 @@
-# React + Vite
+# React Todo App 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+See on lihtne **Todo rakendus**, loodud **React + Vite** abil. Inspiratsiooniks oli varasem **Vue Todo projekt**, nüüd täielikult Reacti versioon.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Ülesande info
 
-## React Compiler
+Projekt on tehtud **Tallinna Polütehnikumi** kursuse **„Kasutajakeskne kasutajaliidese disain“** raames, õpetaja **Kaspar Martin Suursalu** juhendamisel.  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Ülesande eesmärk oli **lahendada todo listi rakendus Reactiga**, järgides kasutajakeskse disaini põhimõtteid, sarnaselt Vue versiooniga:  
+[Vue Todo ülesanne](https://github.com/sirlikont/learnvue)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Funktsioonid
+
+- Lisa uus item sisestusvälja ja Enter või nupuga ✔  
+- Märgi itemid tehtuks / ostetud ✔  
+- Itemid liiguvad automaatselt sektsioonide vahel:
+  - Kõik
+  - Ostetud
+  - Ostmata
+- Kõik andmed hoitakse rakenduse state’is (React `useState`) ✔
+
+---
+
+## Tehnoloogiad
+
+- [React](https://reactjs.org/)  
+- [Vite](https://vitejs.dev/)  
+- JavaScript ES6+  
+
+---
+
+## Käivitamine:
+
+1. Clone repo:
+
+```bash
+git clone https://github.com/sirlikont/react-todo.git
+cd react-todo
+```
+2. Installi sõltuvused:
+
+```bash
+npm install
+```
+
+3. Käivita dev server:
+```bash
+npm run dev
+```

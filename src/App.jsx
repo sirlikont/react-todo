@@ -19,6 +19,17 @@ export default function App() {
     setNewItem("");
   }
 
+  const doneItems = items.filter((item) => item.isDone);
+  const toDoItems = items.filter((item) => !item.isDone);
+
+  function toggleDone(id) {
+    setItems(
+      items.map((item) =>
+        item.id === id ? { ...item, isDone: !item.isDone } : item,
+      ),
+    );
+  }
+
   return (
     <div className="container">
       <h1>Todo App</h1>
@@ -33,9 +44,45 @@ export default function App() {
 
       <button onClick={addItem}>Add item</button>
 
+      <h2>Kõik</h2>
       <ul>
         {items.map((item) => (
-          <li key={item.id}>{item.name}</li>
+          <li key={item.id}>
+            <input
+              type="checkbox"
+              checked={item.isDone}
+              onChange={() => toggleDone(item.id)}
+            />
+            {item.name}
+          </li>
+        ))}
+      </ul>
+
+      <h2>Ostetud</h2>
+      <ul>
+        {doneItems.map((item) => (
+          <li key={item.id}>
+            <input
+              type="checkbox"
+              checked={item.isDone}
+              onChange={() => toggleDone(item.id)}
+            />
+            {item.name}
+          </li>
+        ))}
+      </ul>
+
+      <h2>Ostmata</h2>
+      <ul>
+        {toDoItems.map((item) => (
+          <li key={item.id}>
+            <input
+              type="checkbox"
+              checked={item.isDone}
+              onChange={() => toggleDone(item.id)}
+            />
+            {item.name}
+          </li>
         ))}
       </ul>
     </div>
